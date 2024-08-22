@@ -171,7 +171,7 @@ namespace Api_Crm_MAF.Controllers
                 </filter>                
                 </entity>
                 </fetch>";
-                strFetch = string.Format(strFetch, Js_Registro.Motivo, Js_Registro.SubMotivo, Js_Registro.TipoCaso);
+                strFetch = string.Format(strFetch, Js_Registro.Motivo, Js_Registro.SubMotivo, "1"); // El ultimo parametro de este Format debe ser Js_Registro.TipoCaso pero por el momento estará en duro como "1"
                 EntityCollection ecFinalidad = servicio.RetrieveMultiple(new FetchExpression(strFetch));
                 if (ecFinalidad.Entities.Count > 0)
                 {
